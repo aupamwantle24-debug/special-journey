@@ -51,17 +51,42 @@ export default function App() {
   ];
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Special Journey 🇧🇼</h1>
-      <p>Botswana Destination Guide</p>
+  <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <h1 style={{ textAlign: "center" }}>Special Journey 🇧🇼</h1>
+    <p style={{ textAlign: "center" }}>
+      Botswana Destination Guide
+    </p>
 
-      {destinations.map((place, index) => (
-        <div key={index} style={{ marginBottom: "20px" }}>
-          <h2>{place.name}</h2>
-          <p>{place.description}</p>
-          <a href={place.map} target="_blank">📍 Navigate</a>
-        </div>
-      ))}
-    </div>
-  );
-}
+    {destinations.map((place, index) => (
+      <div
+        key={index}
+        style={{
+          marginBottom: "25px",
+          padding: "15px",
+          borderRadius: "12px",
+          boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+          background: "#fff"
+        }}
+      >
+        <h2>{place.name}</h2>
+        <p>{place.description}</p>
+
+        <a
+          href={place.map}
+          target="_blank"
+          style={{
+            display: "inline-block",
+            marginTop: "10px",
+            padding: "10px 15px",
+            background: "#007BFF",
+            color: "white",
+            borderRadius: "8px",
+            textDecoration: "none"
+          }}
+        >
+          📍 Navigate
+        </a>
+      </div>
+    ))}
+  </div>
+);

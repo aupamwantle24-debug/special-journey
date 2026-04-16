@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function App() {
+  const [search, setSearch] = useState("");
   const destinations = [
     {
       name: "Okavango Delta",

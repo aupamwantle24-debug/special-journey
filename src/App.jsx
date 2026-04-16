@@ -1,86 +1,65 @@
 export default function App() {
   const destinations = [
     {
-      name: "Kasane",
-      image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Chobe_river.jpg",
+      name: "Okavango Delta",
       description:
-        "Kasane is a vibrant gateway town to Chobe National Park, famous for its dense elephant population and scenic riverfront wildlife viewing.",
-      map: "https://www.google.com/maps/search/?api=1&query=Kasane+Botswana",
-      accommodation: [
-        {
-          name: "Chobe Safari Lodge",
-          contact: "+267 625 0336",
-          price: "$150 per night"
-        }
-      ]
+        "A UNESCO World Heritage Site with rich wildlife and unique inland delta ecosystems.",
+      map: "https://www.google.com/maps/search/?api=1&query=Okavango+Delta+Botswana"
     },
     {
-      name: "Nxai Pan",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Baines_Baobabs.jpg",
+      name: "Chobe National Park",
       description:
-        "Nxai Pan offers open salt pans, seasonal wildlife, and the iconic Baines Baobabs, creating one of Botswana’s most unique landscapes.",
-      map: "https://www.google.com/maps/search/?api=1&query=Nxai+Pan+Botswana",
-      accommodation: [
-        {
-          name: "Nxai Pan Camp",
-          contact: "+267 686 1241",
-          price: "$200 per night"
-        }
-      ]
+        "Famous for its large elephant population and river safaris along the Chobe River.",
+      map: "https://www.google.com/maps/search/?api=1&query=Chobe+National+Park"
+    },
+    {
+      name: "Moremi Game Reserve",
+      description:
+        "A diverse wildlife reserve with lagoons, floodplains, and forests.",
+      map: "https://www.google.com/maps/search/?api=1&query=Moremi+Game+Reserve"
+    },
+    {
+      name: "Makgadikgadi Pans",
+      description:
+        "Vast salt pans known for unique landscapes and zebra migrations.",
+      map: "https://www.google.com/maps/search/?api=1&query=Makgadikgadi+Pans"
+    },
+    {
+      name: "Tsodilo Hills",
+      description:
+        "Ancient rock art site with cultural and spiritual significance.",
+      map: "https://www.google.com/maps/search/?api=1&query=Tsodilo+Hills"
     },
     {
       name: "Kalahari Desert",
-      image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Kalahari_Desert.jpg",
       description:
-        "The Kalahari Desert features vast sandy terrain, unique wildlife, and deep cultural heritage of the San people.",
-      map: "https://www.google.com/maps/search/?api=1&query=Kalahari+Desert+Botswana",
-      accommodation: [
-        {
-          name: "Kalahari Plains Camp",
-          contact: "+267 390 0000",
-          price: "$250 per night"
-        }
-      ]
+        "A semi-arid desert with red dunes and rich cultural heritage.",
+      map: "https://www.google.com/maps/search/?api=1&query=Kalahari+Desert+Botswana"
+    },
+    {
+      name: "Nxai Pan National Park",
+      description:
+        "Known for salt pans, wildlife, and Baines Baobabs.",
+      map: "https://www.google.com/maps/search/?api=1&query=Nxai+Pan+Botswana"
+    },
+    {
+      name: "Kasane",
+      description:
+        "Gateway to Chobe National Park and river safari experiences.",
+      map: "https://www.google.com/maps/search/?api=1&query=Kasane+Botswana"
     }
   ];
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <div style={{ padding: "20px" }}>
       <h1>Special Journey 🇧🇼</h1>
-      <p>Your complete Botswana travel guide</p>
+      <p>Botswana Destination Guide</p>
 
       {destinations.map((place, index) => (
-        <div
-          key={index}
-          style={{
-            marginBottom: "30px",
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "15px"
-          }}
-        >
+        <div key={index} style={{ marginBottom: "20px" }}>
           <h2>{place.name}</h2>
-
-          <img
-            src={place.image}
-            alt={place.name}
-            style={{ width: "100%", borderRadius: "10px" }}
-          />
-
           <p>{place.description}</p>
-
-          <a href={place.map} target="_blank">
-            📍 Navigate
-          </a>
-
-          <h3>Accommodation</h3>
-          {place.accommodation.map((hotel, i) => (
-            <div key={i}>
-              <p><strong>{hotel.name}</strong></p>
-              <p>📞 {hotel.contact}</p>
-              <p>💲 {hotel.price}</p>
-            </div>
-          ))}
+          <a href={place.map} target="_blank">📍 Navigate</a>
         </div>
       ))}
     </div>

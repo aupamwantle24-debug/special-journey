@@ -1,1 +1,1 @@
-# special-journey 1
+BOTS DESTINATION GUIDE

@@ -44,7 +44,9 @@ export default function App() {
       map: "https://www.google.com/maps/search/?api=1&query=Kasane+Botswana"
     }
   ];
-
+const filteredDestinations = destinations.filter((place) =>
+  place.name.toLowerCase().includes(search.toLowerCase())
+);
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h1 style={{ textAlign: "center" }}>Special Journey 🇧🇼</h1>
